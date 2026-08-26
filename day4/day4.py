@@ -1,10 +1,10 @@
 def main():
     print ("Hello Word")
     person_info = {
-   'firstname:':'Asabeneh',
-   'lastname:':'Yetayeh',
-   'country:':'Finland',
-   'city:':'Helsinki'
+        'firstname:':'Asabeneh',
+        'lastname:':'Yetayeh',
+        'country:':'Finland',
+        'city:':'Helsinki'
     }
     print(len(person_info))
     
@@ -14,6 +14,8 @@ def main():
     # thông tin ng dùng:
     #in 4 thông tin thành 4 hàng không có ngoặc  
     print(person_info['city:'])
+    print(person_info['firstname:'])
+    
     for x, y in person_info.items():
         
         print(x,y)
