@@ -15,6 +15,7 @@ def main():
     #in 4 thông tin thành 4 hàng không có ngoặc  
     print(person_info['city:'])
     print(person_info['firstname:'])
+    print(person_info['firstname:'])
     
     for x, y in person_info.items():
         
