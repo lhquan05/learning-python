@@ -8,12 +8,19 @@
 #  - There should be two giam doc in the company
 #  - Print the whole company's list.
 
+#####!!!!!!!!!!!!: Gán đúng vị trí. Tăng tuổi theo số năm tương ứng nhập vào
 
-current_year=2026
+
+onboard_year=2026
+
+
+current_year=int(input("Nam:"))
+
+year_passed= current_year - onboard_year
 
 employee_list=[{
             'Ten': "A1",
-            'Tuoi' :20,
+            'Tuoi' :20, 
             'Position':""
         },
         {
@@ -57,7 +64,7 @@ nv_5['Position'] = postion[4] # Lấy tuple ra gán vào dict
 print(type(employee_list))
 print(type(postion))
 
-print(type(current_year))
+
 
 # count=0
 
@@ -85,17 +92,20 @@ print(type(current_year))
 #step 3: cộng  lên theo year
 #step 4: ghi vào lại list 
 #step 5: in ra "Chuc mung sinh nhat lan thu Tuoi cua Ten"
+for employee_age in employee_list:
+    employee_age['Tuoi']+= year_passed
+
+    chuc_mung=f"Chuc mung sinh nhat lan thu {employee_age['Tuoi']} cua {employee_age['Ten']}"
+    
+    print(chuc_mung)
 
 i=0
-
-
-
 for ten_tuoi in employee_list:
    
     
     # ten_tuoi['Tuoi']+=1
     
-    # if current_year == 2027:
+    if current_year == 2027:
     
         ten_tuoi["Tuoi"]= ten_tuoi["Tuoi"] + 1
     
@@ -104,23 +114,16 @@ for ten_tuoi in employee_list:
     
         print(chuc_mung)
         
-        promotion = ten_tuoi["Position"]
+    promotion = ten_tuoi["Position"]
         
-        # if ten_tuoi["Position"]=="nhân viên":
-        #     continue
+    if ten_tuoi["Position"]=="nhân viên":
+         continue
                 
-        if (i < len(postion) - 1):
-            ten_tuoi["Position"]=postion[i+1]
+    if (i < len(postion) - 1):
+        ten_tuoi["Position"]=postion[i+1]
         
         i= i+1
         
-        
-        
-        
-    
-        
-
-    
         
         
      
@@ -133,36 +136,3 @@ print(employee_list)
     #B2; check vị trí thằng kế
     #B3: gắn vào thanwf hiện tại
     
-    
-    
-    
-    
-   
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-
-    
-
-
-             
-
-
-
-    
-# employee_list.remove(employee_list[1])
-
-
-
-
-
-
-
-
