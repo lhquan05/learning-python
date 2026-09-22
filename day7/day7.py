@@ -23,7 +23,26 @@ a=list(fruits)
 
 print(type(a))
 
-
+"""
+    In menu gồm 3 options: 
+        1. Đếm số lượng phần tử
+        2. Xoá phần tử cuối cùng 
+        3. Thêm phần tử mới vào cuối danh sách -> Yêu cầu nhập thêm content của phần tử => in ra
+        
+    Tạo input gán vào biến tên select. Đọc input từ bàn phím
+    select=1
+    
+    select=3
+    content= 
+    
+    Tạo tupple/list gồm 10 phần tử bất kì
+    
+    Điều kiện là chạy liên tục: sau khi thưck hiện xogn 1 option thì hỏi option tiếp theo liền
+            (chỉ bấm duy nhất 1 lần F5 để chạy, nếu muốn thoát bấm Pause hoặc là Ctrl+C dưới Terminal để thoát)
+        
+        Gợi ý dùng for
+        
+"""
 
 
 
