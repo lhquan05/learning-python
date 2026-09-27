@@ -65,6 +65,21 @@ epkieu=bool(anh1)
 print(type(epkieu))
 print(epkieu)
 
+family=("Quan","Nhu","Thong")
+
+member="Quan"
+
+if member in family:
+    tvien="ten " + member +" co trong do"
+    print(tvien)
+    
+    
+
+else:
+    print("ko có")
+    
+    
+    
 
 def hamtinhtoanphuctapvakiemtra():
     None
