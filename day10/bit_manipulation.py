@@ -47,7 +47,11 @@ print(chr(int('01100001', 2))) # 1 ký tự dc biểu diễn = 1 byte
 0b00000001 = 1
 0b00000010 = 2
 0b00000100 = 4
+0b00000101 = 4 + 1
 0b00001000 = 8
+
+
+0b00000111 = 0b00000001 << + 1 << +1
 
 ==> nhận xét với mỗi số 1 thì biểu thức tăng lên 2 mũ x ( x tương đương với vị trí của số 1).
 ==> khi bit 1 dịch qua trái 1 đvi thì kqua thập phân tăng lên GẤP ĐÔI.
