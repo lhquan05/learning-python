@@ -10,7 +10,7 @@ vdu: Đặt biến tên seen = '0011' có nghĩa là trong 4 ng thì 2 ng cúi c
 """
 applicants_list=[]
 i=0
-seen=""
+seen=0
 
 while i<=4:
     
@@ -24,16 +24,25 @@ while i<=4:
     
     answers=visa_question.lower()
     
-    i+=1
-    
     if answers == "yes":
-        seen=f""
-    
+        seen = (seen << 1) + 1
+        
+        i+=1
+        
+        print(seen)
+    elif answers == "no":
+        
+        seen = seen <<1 
+        
+        i+=1
+        
+        print(seen)
     else:
-        None
+        print("Sai cú Pháp. Vui lòng nhập lại")
+    
    
-
-
+print("ket qua la:", seen)
+    
 
 
 
