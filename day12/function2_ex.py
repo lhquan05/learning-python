@@ -36,50 +36,101 @@ def  area_of_circle(r):
 
 
 #Bài 3
-
-def add_all_nums (a, b):
-    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+#! Sai đề bài
+# def add_all_nums (a, b): 
+#     if isinstance(a, (int, float)) and isinstance(b, (int, float)):
         
-        print("tất cả đều là kiểu number")
+#         print("tất cả đều là kiểu number")
         
-        sum = a + b 
+#         sum = a + b 
         
-        return sum
+#         return sum
     
-    else:
-        print("không đúng format nên không thể cộng")
+#     else:
+#         print("không đúng format nên không thể cộng")
+
+def add_all_nums (number_list):
+    
+    do_dai = len(number_list)
+    
+    sum= 0
+    
+    for item in number_list:
+        if isinstance(item,(int, float)) == False:
+            
+            print("có 1 item không phải kiểu số trong list")
+            return 0
+        
+        else:
+            
+            sum = sum + item
+            
+    return sum
+    
+            
+            
+        
+            
+    
+
     
         
 
 #Bài 4
-def convert_celsius_to_fahrenheit(C_degree):
-     
-     F= (C_degree * 9/5) + 32
-     return F
+def  convert_celsius_to_fahrenheit(C_degree):
+    
+     #°F = (°C x 9/5) + 32
+     F_degree = (C_degree * 9/5) + 32
+     return F_degree
  
      
 #Bài 5 
 def check_season(month):
-    if 1 <= month <= 3:
+    if month >= 1 and month <= 3:
+        
         return "spring"
     
-    if 4 <= month <= 6:
+    elif month >= 4 and month <= 6:
         return "summer"
     
-    if 7 <= month <= 9:
+    elif  month >=7 and month <= 9:
         return " fall"
     
-    if 10<= month <= 12:
+    elif month>= 10  and month <= 12:
         
         return "winter"
     
     else: 
         print(" sai định dạng")
+        
+
+def check_season2(month):  
+    if month <1 or month >12:
+        print("sai định dạng")
+        
+        return None #cách 2 là return ""
     
+        
+    elif month <= 3:
+        return "spring"
+    
+    elif month <= 6:
+        return "summer"
+    
+    elif month <=9:
+        return "fall"
+    
+    else:
+        return "winter"
+    
+        
+        
     
 #Bài 6
-
+#y = a*x + b
+# y = 2*x +3
 def  calculate_slope(a, b):
+    
     return a
 
 
@@ -98,7 +149,7 @@ def Quadratic_equation(a, b, c):
         
         x  = -b / (2*a)
         
-        return x
+        return x, x
     
     if delta > 0:
         print("phương trình có 2 nghiệm phân biệt")
@@ -112,6 +163,9 @@ def Quadratic_equation(a, b, c):
     
     else: 
         print("ptrinh vô nghiệm")
+        return None, None
+
+
         
         
 
@@ -131,8 +185,11 @@ if __name__ == "__main__":
     print(dien_tich)
     
     #Bài 3
+    number_list = [1, 2, 4, 6, 7]
+    # number_check = add_all_nums(number_list)
+    number_check = add_all_nums([1, 2, "a", 6, 7])# cách 2 cho list vào hàm 
     
-    number_check = add_all_nums("2", 4)
+    
     
     print("tổng của các number = ", number_check)
     
@@ -142,11 +199,12 @@ if __name__ == "__main__":
     print(Nhiet_do)
     
     #Bài 5
-    mua = check_season(6)
+    mua = check_season(0)
     
     print(mua)
     
     #Bài 6
+    #hai hệ số a, b phải lấy ra từ hàm số(equation) chứ không phải mình tự gán như ở dưới
     slope =  calculate_slope(3, 2)
     
     print(slope)
@@ -158,6 +216,8 @@ if __name__ == "__main__":
     print( "x1 = ", x1 )
     
     print( "x2 = ", x2)
+    
+    
     
     
     
