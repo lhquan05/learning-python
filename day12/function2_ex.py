@@ -166,6 +166,41 @@ def Quadratic_equation(a, b, c):
         return None, None
 
 
+
+#Bai 8 
+
+def print_list(input_list):
+    
+    for element in input_list:
+        print(element)
+    
+
+#Bai 9 
+
+def reverse_list(input_list):
+    reverse_list = []
+    
+    do_dai= len(input_list)
+    
+    for index in range(do_dai-1, -1, -1):
+        
+        print(input_list[index])
+        
+        #lay phan tu cuoi cua input_list gan vao phan tu dau tien cua reverse_list
+        
+        reverse_list.append(input_list[index])
+        
+    print(reverse_list)
+    
+    # input_list = reverse_list
+    
+    # print(input_list)
+    
+    return reverse_list
+
+        
+   
+
         
         
 
@@ -218,6 +253,20 @@ if __name__ == "__main__":
     print( "x2 = ", x2)
     
     
+    #Bai 8 
+    colour_list = ["orange",'yellow','blue']
+    
+    empty_list =[]
+    
+    print_list(colour_list)
+    
+    print_list(empty_list)
     
     
+    #Baif 9
+    # reverse_list(colour_list)
+    
+    in_dsach = reverse_list(colour_list)
+    
+    print(in_dsach)
     
